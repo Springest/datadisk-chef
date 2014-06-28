@@ -1,4 +1,4 @@
-name             'datadisk-chef'
+name             'datadisk'
 maintainer       'Milo de Vries | Springest'
 maintainer_email 'milo@springest.com'
 license          'MIT'
