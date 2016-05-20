@@ -16,12 +16,12 @@ action :create do
   partition = "#{disk}1"
 
   execute "partition the disk" do
-    command "echo -e "n\np\n1\n\nw" | fdisk #{disk}"
-    not_if { File.exist?(partition) }
+    command "echo -e 'n\np\n1\n\n\nw\n' | fdisk #{disk}"
+    not_if { ::File.exist?(partition) }
   end
 
   execute "format the disk" do
-    command "mkfs -t ext3 #{partition}"
+    command "mkfs -t ext4 #{partition}"
     not_if { disk.nil? || ::File.directory?("#{datadir}") }
   end
 

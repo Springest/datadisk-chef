@@ -9,13 +9,13 @@ one of its maintained forks.
 datadisk Cookbook
 =================
 
-This cookbook formats and mounts a second disk (datadisk) on the specified mountpoint. If you like living dangerously, you can try this with an existing dir by using ::existing_datadir, but that code is less polished (this is done in single user mode using rsync, which is somewhat finicky).
+This cookbook formats and mounts a second disk (datadisk) on the specified mountpoint. If you like living dangerously, you can try this with an existing dir by using `::existing_datadir`, but that code is less polished (this is done in single user mode using rsync, which is somewhat finicky).
 
 Requirements
 ------------
-- a second disk following the format of /dev/[sx]v?d[a-z], e.g. /dev/sdb or /dev/xvde, containing a partition without filesystem
+- a second disk following the format of `/dev/[sx]v?d[a-z]`, e.g. `/dev/sdb` or `/dev/xvde`, containing a partition without filesystem
 
-for the ::existing_datadir recipe:
+for the `::existing_datadir` recipe:
 - an OS using upstart
 - recent, working (believe is what you do in church!) backups (though tested and with several failsafes in place, this cookbook still does pretty scary stuff.)
 
@@ -76,8 +76,9 @@ Contributing
 ------------
 
 e.g.
+
 1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
+2. Create a named feature branch (like `add_component_x`) 
 3. Write your change
 4. Write tests for your change (if applicable)
 5. Run the tests, ensuring they all pass
